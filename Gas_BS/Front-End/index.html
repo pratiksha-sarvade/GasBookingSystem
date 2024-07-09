@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0;
+			justify-content: left;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+			
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+			justify-content: center;
+        }
+		/*.button_box {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+}*/
+
+/*.toggle-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+	justify-content: center;
+}*/
+
+/*.toggle-btn.active {
+    background-color: #45a049;
+}*/
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+            background: #f4f4f4;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0;
+        }
+
+        .feature {
+            background: #f4f4f4;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+		
+		/*.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}*/
+
+.footer-info {
+    float: left;
+}
+
+.footer-info h3 {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    float: right;
+}
+
+.social-links a {
+    margin-left: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gas Booking System</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+					<li><a href="admin.html">Admin</a></li>
+                    <li><a href="customer.html">Customer</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+				<!--div class="button_box">
+        <div id="btn_sign_up"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Sign-In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Sign-Up</button>
+    </div>
+				<!--div class="right-items">
+    <button class="button">Login</button>
+    <button class="button">Register</button>
+  </div-->
+            </nav>
+			<!--div class="button_box">
+        <div id="btn_sign_up"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Sign-In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Sign-Up</button>
+    </div-->
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>Book Your Gas Cylinder Online</h2>
+                <p>Quick and easy gas booking from the comfort of your home.</p>
+                <img src="gas.png" alt="gas">
+            </section>
+            <section class="features">
+                <div class="feature">
+                    <h3>Easy Booking</h3>
+                    <p>Book your gas cylinder with just a few clicks.</p>
+                </div>
+                <div class="feature">
+                    <h3>Timely Delivery</h3>
+                    <p>Get your gas cylinder delivered on time, every time.</p>
+                </div>
+                <div class="feature">
+                    <h3>24/7 Support</h3>
+                    <p>Our support team is available 24/7 to assist you.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+	<div class="container">
+            <div class="footer-info">
+            <p>&copy; 2024 Gas Booking System. All rights reserved.</p>
+        </div>
+		 <div class="social-links">
+                <a href="#"><img src="facebook1.png" alt="Facebook"></a>
+                <a href="#"><img src="iconstwitter-482.png" alt="Twitter"></a>
+                <a href="#"><img src="iconinstagram-48.png" alt="Instagram"></a>
+				<a href="#"><img src="iconwhatsapp-48.png" alt="Whatsapp"></a>
+            </div>
+			</div>
+    </footer>
+	 <!-- JavaScript -->
+    <script>
+        // Example JavaScript function for toggling sign-in/sign-up
+        function login() {
+		// Display a modal or perform any other login action
+            alert('Implement your login logic here.');
+        }
+
+        function register() {
+		 // Display a modal or perform any other registration action
+            alert('Implement your registration logic here.');
+        }
+    </script>
+	<!-- Example JavaScript with AJAX -->
+<!--script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Example AJAX GET request
+        $.ajax({
+            url: '/api/bookings',
+            type: 'GET',
+            success: function(data) {
+                // Handle successful response
+                console.log('Received data:', data);
+            },
+            error: function(xhr, status, error) {
+                // Handle errors
+                console.error('Error:', error);
+            }
+        });
+    });
+</script-->
+	
+</body>
+</html>

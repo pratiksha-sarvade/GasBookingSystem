@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+main {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh;*/
+  margin: 0;
+}
+       .form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 400px;
+
+}
+
+.container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resize */
+}
+
+.form-group small {
+  color: #999;
+  font-size: 12px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+   margin:20px;
+}
+
+.button-group button:hover {
+  background-color: #45a049;
+  color: white;
+}
+      footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+		
+		/*.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}*/
+
+.footer-info {
+    float: left;
+}
+
+.footer-info h3 {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    float: right;
+}
+
+.social-links a {
+    margin-left: 10px;
+}
+    </style>
+	
+	<script>
+function validateForm() {
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var address = document.getElementById('address').value;
+    var password = document.getElementById('password').value;
+
+    if (username === '' || email === '' || phone === '' || address === '' || password === '') {
+        alert('Please fill out all fields');
+        return false;
+    }
+
+    // Additional validation logic for email, phone format, etc. can be added here
+
+    return true;
+}
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gas Booking System</h1>
+            <nav>
+                <ul>
+                    <li><a href="index1.html">Home</a></li>
+					<li><a href="cbooking.html">Booking</a></li>
+					<li><a href="cpayment.html">Payment</a></li>
+                    <li><a href="cdelivery.html">Delivery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+  <h2>Customer Registration</h2>
+  
+  <form action="/submit_customer_registration" method="POST" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+      <small>Format: 10 digits without spaces</small>
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div class="button-group">
+      <button type="submit">Submit</button>
+      <button type="button" onclick="window.location.href='/cancel_link'">Cancel</button>
+    </div>
+  </form>
+</div>
+
+    </main>
+    <footer>
+	<div class="container">
+            <div class="footer-info">
+            <p>&copy; 2024 Gas Booking System. All rights reserved.</p>
+        </div>
+		 <div class="social-links">
+                <a href="#"><img src="facebook1.png" alt="Facebook"></a>
+                <a href="#"><img src="iconstwitter-482.png" alt="Twitter"></a>
+                <a href="#"><img src="iconinstagram-48.png" alt="Instagram"></a>
+				<a href="#"><img src="iconwhatsapp-48.png" alt="Whatsapp"></a>
+            </div>
+			</div>
+    </footer>
+	<!--Dynamic Content: You can use JavaScript to dynamically update elements on your webpage based on user interactions or other events.-->
+	<script>
+// Example: Update content dynamically
+document.getElementById('someElementId').innerHTML = 'New Content';
+</script>
+<!--Handling Events: You can attach event listeners to elements to perform actions when certain events occur, such as clicking a button or hovering over an element.-->
+<script>
+document.getElementById('someButton').addEventListener('click', function() {
+    // Do something when the button is clicked
+});
+</script>
+</body>
+</html>

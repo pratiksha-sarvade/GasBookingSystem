@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+      footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+		
+		/*.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}*/
+
+.footer-info {
+    float: left;
+}
+
+.footer-info h3 {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    float: right;
+}
+
+.social-links a {
+    margin-left: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gas Booking System</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+					<li><a href="gas.html">Gas</a></li>
+					<li><a href="booking.html">Booking</a></li>
+					<li><a href="payment.html">Payment</a></li>
+                    <li><a href="delivery.html">Delivery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+          <div class="form-container">
+            <h2>Add Gas Details</h2>
+            <form action="add_gas_process.php" method="post" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="gas_name">Gas Name</label>
+                    <input type="text" id="gas_name" name="gas_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="gas_price">Gas Price</label>
+                    <input type="text" id="gas_price" name="gas_price" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+	<div class="container">
+            <div class="footer-info">
+            <p>&copy; 2024 Gas Booking System. All rights reserved.</p>
+        </div>
+		 <div class="social-links">
+                <a href="#"><img src="facebook1.png" alt="Facebook"></a>
+                <a href="#"><img src="iconstwitter-482.png" alt="Twitter"></a>
+                <a href="#"><img src="iconinstagram-48.png" alt="Instagram"></a>
+				<a href="#"><img src="iconwhatsapp-48.png" alt="Whatsapp"></a>
+            </div>
+			</div>
+    </footer>
+	
+	<script>
+        function validateForm() {
+            var gasName = document.getElementById('gas_name').value;
+            var gasPrice = document.getElementById('gas_price').value;
+
+            // Simple validation example (you can enhance this)
+            if (gasName.trim() === '') {
+                alert('Please enter Gas Name');
+                return false; // Prevent form submission
+            }
+
+            if (gasPrice.trim() === '' || isNaN(gasPrice)) {
+                alert('Please enter a valid Gas Price');
+                return false; // Prevent form submission
+            }
+
+            // You can add more complex validation here as needed
+
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
